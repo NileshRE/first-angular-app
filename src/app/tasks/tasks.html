@@ -1,0 +1,21 @@
+@if (isAddingTask && userId) {
+<app-new-task (cancel)="onCancelTask()" [userId]="userId" />
+}
+<div id="tasks-container">
+  @if (userName) {
+  <div id="tasks-header">
+    <h2>{{ userName }}'s Tasks</h2>
+    <button (click)="onAddingTask()">Add Task</button>
+  </div>
+  @if(selectedUserTasks.length === 0) {
+  <p class="no-task">No tasks available. Please add a new one</p>
+  } @else {
+  <ul class="task-list">
+    @for (task of selectedUserTasks; track task.id) {
+    <app-task [task]="task" />
+    }
+  </ul>
+  } } @else {
+  <h2>Please select a user to view their tasks.</h2>
+  }
+</div>

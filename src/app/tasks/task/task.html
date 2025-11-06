@@ -1,0 +1,7 @@
+<div>
+  <h3>
+    {{ task.title }} <span>{{ task.time | date : 'dd MMM yyyy, hh:mm a' }}</span>
+  </h3>
+  <p>{{ task.description }}</p>
+  <button (click)="onTaskComplete()">Mark as Complete</button>
+</div>

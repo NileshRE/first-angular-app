@@ -1,0 +1,18 @@
+p {
+  background-color: var(--hot-red);
+  padding: 8px 24px;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+}
+
+p:hover {
+  background-color: #e92677b0;
+  cursor: pointer;
+}
+
+p.active {
+  background-color: var(--vivid-pink);
+  cursor: default;
+}
